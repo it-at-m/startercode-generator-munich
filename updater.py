@@ -16,14 +16,14 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # CONSTANTS ------------------------------------------------------------------ #
 
 PATH_METADATA = "_metadata_json/"
-BASELINK_DATASHOP = "https://opendata.muenchen.de/dataset/"
+BASELINK_DATASHOP = "https://www.zh.ch/de/politik-staat/opendata.html#/datasets/"
 
-PROVIDER = "Landeshauptstadt München"
+PROVIDER = "Canton Zurich"
 SHOP_METADATA_LINK = "https://www.web.statistik.zh.ch/ogd/daten/zhweb.json"
 SHOP_ABBR = "ktzh"
 
-GITHUB_ACCOUNT = "TxominBasterraChang"
-REPO_NAME = "Results_StarterCode"
+GITHUB_ACCOUNT = "openZH"
+REPO_NAME = "starter-code-openZH"
 REPO_BRANCH = "main"
 REPO_R_MARKDOWN_OUTPUT = "01_r-markdown/"
 REPO_PYTHON_OUTPUT = "02_python/"
