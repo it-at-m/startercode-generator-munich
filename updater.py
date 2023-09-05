@@ -16,7 +16,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # CONSTANTS ------------------------------------------------------------------ #
 
 PATH_METADATA = "_metadata_json/"
-BASELINK_DATASHOP = "https://www.zh.ch/de/politik-staat/opendata.html#/datasets/"
+BASELINK_DATASHOP = "https://opendata.muenchen.de/"
 
 PROVIDER = "Canton Zurich"
 SHOP_METADATA_LINK = "https://sfbg.de/lhm/ckanmuc.json"
