@@ -1,4 +1,4 @@
-# IMPORTS -------------------------------------------------------------------- #
+<div><br class="Apple-interchange-newline"># IMPORTS -------------------------------------------------------------------- #
 
 import pandas as pd
 import numpy as np
@@ -16,10 +16,10 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # CONSTANTS ------------------------------------------------------------------ #
 
 PATH_METADATA = "_metadata_json/"
-BASELINK_DATASHOP = "https://opendata.muenchen.de/"
+BASELINK_DATASHOP = "https://www.zh.ch/de/politik-staat/opendata.html#/datasets/"
 
 PROVIDER = "Canton Zurich"
-SHOP_METADATA_LINK = "https://sfbg.de/lhm/ckanmuc.json"
+SHOP_METADATA_LINK = "https://www.web.statistik.zh.ch/ogd/daten/zhweb.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
@@ -264,4 +264,4 @@ create_python_notebooks(df)
 create_rmarkdown(df)
 
 header = get_header(len(df))
-create_overview(df, header)
+create_overview(df, header)</div>
