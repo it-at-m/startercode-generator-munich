@@ -41,11 +41,10 @@ TODAY_DATETIME = datetime.today().strftime("%Y-%m-%d %H:%M:%S")
 TITLE_MAX_CHARS = 200
 
 # select metadata features that are going to be displayed in starter code files
-KEYS_DATASET = ['issued', 'modified', 'startDate', 'endDate',
-                'theme', 'keyword', 'publisher', 'landingPage']
+KEYS_DATASET = ['dct:issued', 'dct:modified', 'startDate', 'dcat:keyword']
 
-KEYS_DISTRIBUTION = ['ktzhDistId', 'title', "description",
-                     'issued', 'modified', "rights"]
+KEYS_DISTRIBUTION = ['dct:title', "dct:description",
+                     'dct:issued', 'dct:modified', "dct:license"]
 
 
 # FUNCTIONS ------------------------------------------------------------------ #
