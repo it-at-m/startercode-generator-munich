@@ -20,7 +20,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
 
       - run: pip install -r requirements.txt
-      - run: python updater_2.py
+      - run: python updater.py
 
       - name: Push generated files to target repository
         uses: cpina/github-action-push-to-another-repository@main
