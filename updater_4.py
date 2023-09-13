@@ -19,7 +19,7 @@ PATH_METADATA = "ABC"
 BASELINK_DATASHOP = "XYZ"
 
 PROVIDER = "Canton Zurich"
-SHOP_METADATA_LINK = "https://sfbg.de/lhm/zuerich_JSON.json"
+SHOP_METADATA_LINK = "https://sfbg.de/lhm/LHM_JSON_3.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
