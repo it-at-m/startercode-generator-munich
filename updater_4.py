@@ -19,7 +19,7 @@ PATH_METADATA = "ABC"
 BASELINK_DATASHOP = "XYZ"
 
 PROVIDER = "Canton Zurich"
-SHOP_METADATA_LINK = "https://sfbg.de/lhm/zuerich_JSON_Test.json"
+SHOP_METADATA_LINK = "https://github.com/TxominBasterraChang/startercode-generator_openZH/blob/main/zuerich_xml.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
