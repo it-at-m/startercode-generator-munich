@@ -19,7 +19,7 @@ PATH_METADATA = "ABC"
 BASELINK_DATASHOP = "XYZ"
 
 PROVIDER = "Canton Zurich"
-SHOP_METADATA_LINK = "https://sfbg.de/lhm/lhm_test_10.json"
+SHOP_METADATA_LINK = "https://sfbg.de/lhm/lhm_test_13.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
@@ -44,7 +44,7 @@ TITLE_MAX_CHARS = 200
 KEYS_DATASET = ['issued', 'modified', 'startDate', 'endDate',
                 'theme', 'keyword', 'publisher', 'landingPage']
 
-KEYS_DISTRIBUTION = ['ktzhDistId', 'title',
+KEYS_DISTRIBUTION = ['ktzhDistId', 'title', "description",
                      'issued', 'modified', "rights"]
 
 
