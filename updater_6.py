@@ -44,7 +44,7 @@ TITLE_MAX_CHARS = 200
 KEYS_DATASET = ['issued', 'modified', 'startDate', 'endDate',
                 'theme', 'keyword', 'publisher', 'landingPage']
 
-KEYS_DISTRIBUTION = ['ktzhDistId', 'title', "description",
+KEYS_DISTRIBUTION = ['ktzhDistId', 'title',
                      'issued', 'modified', "rights"]
 
 
