@@ -19,7 +19,7 @@ PATH_METADATA = "ABC"
 BASELINK_DATASHOP = "https://opendata.muenchen.de/dataset/"
 
 PROVIDER = "Landeshauptstadt München"
-SHOP_METADATA_LINK = "https://sfbg.de/lhm/lhm_test_14.json"
+SHOP_METADATA_LINK = "https://sfbg.de/lhm/lhm_test_12.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
