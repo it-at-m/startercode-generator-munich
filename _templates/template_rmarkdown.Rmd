@@ -6,8 +6,6 @@ output: html_document
 
 ## Dataset: {{ DATASET_TITLE }}
 
-{{ DATASET_DESCRIPTION }}
-
 {{ DATASHOP_LINK }}
 
 Auto generated R starter code for data set {{ DATASET_IDENTIFIER }}.
