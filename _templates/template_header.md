@@ -14,7 +14,7 @@ Feedback is always very welcome – simply open an issue.
 
 ⚠️ **Note**: To download individual files from GitHub you need to switch to the file's `RAW` view and then `Right-Click-Save-As`. Only so you get the proper file format rather than the HTML that GitHub yields.
 
-For all data licenses please refer to each data set's link or the metadata API endpoint provided [here](https://www.zh.ch/de/politik-staat/opendata.zhweb-noredirect.zhweb-cache.html?keywords=ogd#/datasets/1461@fachstelle-ogd-kanton-zuerich).
+For all data licenses please refer to each data set's link or the metadata API endpoint provided [here](https://opendata.muenchen.de/pages/nutzungsbedingungen).
 
 <sub>Latest update: **{{ TODAY_DATE }}**<sub>
 
