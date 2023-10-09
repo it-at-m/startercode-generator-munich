@@ -44,7 +44,7 @@ TITLE_MAX_CHARS = 200
 KEYS_DATASET = ['issued', 'modified', 'startDate', 'endDate',
                 'theme', 'keyword', 'publisher', 'landingPage']
 
-KEYS_DISTRIBUTION = ['ktzhDistId', 'title', "description",
+KEYS_DISTRIBUTION = ['ktzhDistId', 'title',
                      'issued', 'modified', "rights"]
 
 
@@ -135,8 +135,6 @@ def create_python_notebooks(data):
         py_nb = py_nb.replace("{{ DATASET_TITLE }}", re.sub(
             "\"", "\'", data.loc[idx, "title"]))
 
-        py_nb = py_nb.replace("{{ DATASET_DESCRIPTION }}", re.sub(
-            "\"", "\'", data.loc[idx, "description"]))
         py_nb = py_nb.replace("{{ DATASET_IDENTIFIER }}", identifier)
         py_nb = py_nb.replace("{{ DATASET_METADATA }}", re.sub(
             "\"", "\'", data.loc[idx, "metadata"]))
@@ -186,8 +184,6 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ PROVIDER }}", PROVIDER)
         rmd = rmd.replace("{{ TODAY_DATE }}", TODAY_DATE)
         rmd = rmd.replace("{{ DATASET_IDENTIFIER }}", identifier)
-        rmd = rmd.replace("{{ DATASET_DESCRIPTION }}",
-                          data.loc[idx, "description"])
         rmd = rmd.replace("{{ DATASET_METADATA }}", data.loc[idx, "metadata"])
 
         rmd = rmd.replace("{{ CONTACT }}", data.loc[idx, "contact"])
