@@ -19,7 +19,7 @@ PATH_METADATA = "_metadata_json/"
 BASELINK_DATASHOP = "https://www.zh.ch/de/politik-staat/opendata.html#/datasets/"
 
 PROVIDER = "Canton Zurich"
-SHOP_METADATA_LINK = "https://www.web.statistik.zh.ch/ogd/daten/zhweb.json"
+SHOP_METADATA_LINK = "https://raw.githubusercontent.com/it-at-m/startercode-generator_openZH/main/lhm_test_29.json"
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
@@ -44,7 +44,7 @@ TITLE_MAX_CHARS = 200
 KEYS_DATASET = ['issued', 'modified', 'startDate', 'endDate',
                 'theme', 'keyword', 'publisher', 'landingPage']
 
-KEYS_DISTRIBUTION = ['ktzhDistId', 'title', "description",
+KEYS_DISTRIBUTION = ['ktzhDistId', 'title',
                      'issued', 'modified', "rights"]
 
 
@@ -184,8 +184,6 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ PROVIDER }}", PROVIDER)
         rmd = rmd.replace("{{ TODAY_DATE }}", TODAY_DATE)
         rmd = rmd.replace("{{ DATASET_IDENTIFIER }}", identifier)
-        rmd = rmd.replace("{{ DATASET_DESCRIPTION }}",
-                          data.loc[idx, "description"])
         rmd = rmd.replace("{{ DATASET_METADATA }}", data.loc[idx, "metadata"])
 
         rmd = rmd.replace("{{ CONTACT }}", data.loc[idx, "contact"])
