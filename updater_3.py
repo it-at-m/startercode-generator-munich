@@ -180,6 +180,7 @@ def create_rmarkdown(data):
 
         # populate template with metadata
         identifier = data.loc[idx, "identifier"]
+        name = data.loc[idx, "name"]
         rmd = rmd.replace("{{ DATASET_TITLE }}", data.loc[idx, "title"])
         rmd = rmd.replace("{{ PROVIDER }}", PROVIDER)
         rmd = rmd.replace("{{ TODAY_DATE }}", TODAY_DATE)
@@ -190,7 +191,7 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{identifier})'
+        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{name})'
         rmd = rmd.replace("{{ DATASHOP_LINK }}", ds_link)
 
         # create code blocks for all distributions
@@ -235,7 +236,7 @@ def create_overview(data, header):
         if len(title_clean) > TITLE_MAX_CHARS:
             title_clean = title_clean[:TITLE_MAX_CHARS] + "…"
 
-        ds_link = f'{BASELINK_DATASHOP}{identifier}'
+        ds_link = f'{BASELINK_DATASHOP}{name}'
 
         r_gh_link = f'[R GitHub]({baselink_r_gh}{identifier}.Rmd)'
         py_gh_link = f'[Python GitHub]({baselink_py_gh}{identifier}.ipynb)'
