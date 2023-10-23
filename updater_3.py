@@ -193,7 +193,7 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({landingPage)'
+        ds_link = f'[Direct data shop link for dataset]({landingPage})'
         rmd = rmd.replace("{{ DATASHOP_LINK }}", ds_link)
 
         # create code blocks for all distributions
@@ -232,13 +232,14 @@ def create_overview(data, header):
 
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
+        landingPage = data.loc[idx, "landingPage"]
         # remove square brackets from title, since these break markdown links
         title_clean = data.loc[idx, "title"].replace(
             "[", " ").replace("]", " ")
         if len(title_clean) > TITLE_MAX_CHARS:
             title_clean = title_clean[:TITLE_MAX_CHARS] + "…"
 
-        ds_link = f'{BASELINK_DATASHOP}{name}'
+        ds_link = f'{landingPage}'
 
         r_gh_link = f'[R GitHub]({baselink_r_gh}{identifier}.Rmd)'
         py_gh_link = f'[Python GitHub]({baselink_py_gh}{identifier}.ipynb)'
