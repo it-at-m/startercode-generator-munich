@@ -224,8 +224,8 @@ def create_overview(data, header):
     md_doc = []
     md_doc.append(header)
     md_doc.append(
-        f"| ID | Title (abbreviated to {TITLE_MAX_CHARS} chars) | Python Colab | Python GitHub | R GitHub |\n")
-    md_doc.append("| :-- | :-- | :-- | :-- | :-- |\n")
+        f"| ID | Title (abbreviated to {TITLE_MAX_CHARS} chars) | Python GitHub | R GitHub |\n")
+    md_doc.append("| :-- | :-- | :-- | :-- |\n")
 
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
