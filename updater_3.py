@@ -138,6 +138,7 @@ def create_python_notebooks(data):
         py_nb = py_nb.replace("{{ DATASET_DESCRIPTION }}", re.sub(
             "\"", "\'", data.loc[idx, "description"]))
         py_nb = py_nb.replace("{{ DATASET_IDENTIFIER }}", identifier)
+        py_nb = py_nb.replace("{{ LANDING }}", landingPage)
         py_nb = py_nb.replace("{{ DATASET_METADATA }}", re.sub(
             "\"", "\'", data.loc[idx, "metadata"]))
         py_nb = py_nb.replace("{{ DISTRIBUTION_COUNT }}", str(
