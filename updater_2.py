@@ -219,13 +219,12 @@ def create_overview(data, header):
     """Create README with link table"""
     baselink_r_gh = f"https://github.com/{GITHUB_ACCOUNT}/{REPO_NAME}/blob/{REPO_BRANCH}/{REPO_R_MARKDOWN_OUTPUT}"
     baselink_py_gh = f"https://github.com/{GITHUB_ACCOUNT}/{REPO_NAME}/blob/{REPO_BRANCH}/{REPO_PYTHON_OUTPUT}"
-    baselink_py_colab = f"https://githubtocolab.com/{GITHUB_ACCOUNT}/{REPO_NAME}/blob/{REPO_BRANCH}/{REPO_PYTHON_OUTPUT}"
 
     md_doc = []
     md_doc.append(header)
     md_doc.append(
         f"| ID | Title (abbreviated to {TITLE_MAX_CHARS} chars) | Python GitHub | R GitHub |\n")
-    md_doc.append("| :-- | :-- | :-- | :-- |\n")
+    md_doc.append("| :-- | :-- | :-- | :-- | :-- |\n")
 
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
