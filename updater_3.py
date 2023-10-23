@@ -233,13 +233,15 @@ def create_overview(data, header):
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
         landingPage = data.loc[idx, "landingPage"]
+        py_nb = py_nb.replace("{{ LANDING }}", landingPage)
+      
         # remove square brackets from title, since these break markdown links
         title_clean = data.loc[idx, "title"].replace(
             "[", " ").replace("]", " ")
         if len(title_clean) > TITLE_MAX_CHARS:
             title_clean = title_clean[:TITLE_MAX_CHARS] + "…"
 
-        ds_link = f'{landingPage}'
+        ds_link = f'{LANDING}'
 
         r_gh_link = f'[R GitHub]({baselink_r_gh}{identifier}.Rmd)'
         py_gh_link = f'[Python GitHub]({baselink_py_gh}{identifier}.ipynb)'
