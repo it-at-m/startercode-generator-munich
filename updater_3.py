@@ -130,6 +130,7 @@ def create_python_notebooks(data):
 
         # populate template with metadata
         identifier = data.loc[idx, "identifier"]
+        name = data.loc[idx, "name"]
         py_nb = py_nb.replace("{{ PROVIDER }}", PROVIDER)
         py_nb = py_nb.replace("{{ DATASET_TITLE }}", re.sub(
             "\"", "\'", data.loc[idx, "title"]))
@@ -142,7 +143,7 @@ def create_python_notebooks(data):
         py_nb = py_nb.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{identifier})'
+        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{name})'
         py_nb = py_nb.replace("{{ DATASHOP_LINK }}", ds_link)
         py_nb = py_nb.replace("{{ CONTACT }}", data.loc[idx, "contact"])
 
