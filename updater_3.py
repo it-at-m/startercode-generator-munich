@@ -16,11 +16,11 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # CONSTANTS ------------------------------------------------------------------ #
 
 PATH_METADATA = "_metadata_json/"
-BASELINK_DATASHOP = "https://opendata.muenchen.de/dataset/"
+BASELINK_DATASHOP = "https://www.zh.ch/de/politik-staat/opendata.html#/datasets/"
 
-PROVIDER = "Landeshauptstadt München"
+PROVIDER = "Canton Zurich"
 SHOP_METADATA_LINK = "https://raw.githubusercontent.com/it-at-m/startercode-generator_openZH/main/lhm_test_29.json"
-SHOP_ABBR = "lhm"
+SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "TxominBasterraChang"
 REPO_NAME = "Results"
@@ -130,7 +130,6 @@ def create_python_notebooks(data):
 
         # populate template with metadata
         identifier = data.loc[idx, "identifier"]
-        name = data.loc[idx, "name"]
         py_nb = py_nb.replace("{{ PROVIDER }}", PROVIDER)
         py_nb = py_nb.replace("{{ DATASET_TITLE }}", re.sub(
             "\"", "\'", data.loc[idx, "title"]))
@@ -138,13 +137,12 @@ def create_python_notebooks(data):
         py_nb = py_nb.replace("{{ DATASET_DESCRIPTION }}", re.sub(
             "\"", "\'", data.loc[idx, "description"]))
         py_nb = py_nb.replace("{{ DATASET_IDENTIFIER }}", identifier)
-        py_nb = py_nb.replace("{{ LANDING }}", landingPage)
         py_nb = py_nb.replace("{{ DATASET_METADATA }}", re.sub(
             "\"", "\'", data.loc[idx, "metadata"]))
         py_nb = py_nb.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{name})'
+        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{identifier})'
         py_nb = py_nb.replace("{{ DATASHOP_LINK }}", ds_link)
         py_nb = py_nb.replace("{{ CONTACT }}", data.loc[idx, "contact"])
 
@@ -183,7 +181,7 @@ def create_rmarkdown(data):
         # populate template with metadata
         identifier = data.loc[idx, "identifier"]
         name = data.loc[idx, "name"]
-        landingPage = data.loc[idx, "landingPage"]
+
         rmd = rmd.replace("{{ DATASET_TITLE }}", data.loc[idx, "title"])
         rmd = rmd.replace("{{ PROVIDER }}", PROVIDER)
         rmd = rmd.replace("{{ TODAY_DATE }}", TODAY_DATE)
@@ -194,7 +192,7 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({landingPage})'
+        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{name})'
         rmd = rmd.replace("{{ DATASHOP_LINK }}", ds_link)
 
         # create code blocks for all distributions
@@ -233,16 +231,13 @@ def create_overview(data, header):
 
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
-        landingPage = data.loc[idx, "landingPage"]
-        py_nb = py_nb.replace("{{ LANDING }}", landingPage)
-      
         # remove square brackets from title, since these break markdown links
         title_clean = data.loc[idx, "title"].replace(
             "[", " ").replace("]", " ")
         if len(title_clean) > TITLE_MAX_CHARS:
             title_clean = title_clean[:TITLE_MAX_CHARS] + "…"
 
-        ds_link = f'{LANDING}'
+        ds_link = f'{BASELINK_DATASHOP}{identifier}'
 
         r_gh_link = f'[R GitHub]({baselink_r_gh}{identifier}.Rmd)'
         py_gh_link = f'[Python GitHub]({baselink_py_gh}{identifier}.ipynb)'
