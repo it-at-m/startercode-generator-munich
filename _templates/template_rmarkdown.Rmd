@@ -8,7 +8,7 @@ output: html_document
 
 {{ DATASET_DESCRIPTION }}
 
-{{ DATASHOP_LINK }}
+{{ LANDING }}
 
 Auto generated R starter code for data set {{ DATASET_IDENTIFIER }}.
 
