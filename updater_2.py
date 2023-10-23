@@ -224,8 +224,8 @@ def create_overview(data, header):
     md_doc = []
     md_doc.append(header)
     md_doc.append(
-        f"| ID | Title (abbreviated to {TITLE_MAX_CHARS} chars) | Python Colab | Python GitHub | R GitHub |\n")
-    md_doc.append("| :-- | :-- | :-- | :-- | :-- |\n")
+        f"| ID | Title (abbreviated to {TITLE_MAX_CHARS} chars) | Python GitHub | R GitHub |\n")
+    md_doc.append("| :-- | :-- | :-- | :-- |\n")
 
     for idx in tqdm(data.index):
         identifier = data.loc[idx, "identifier"]
@@ -242,7 +242,7 @@ def create_overview(data, header):
         py_colab_link = f'[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]({baselink_py_colab}{identifier}.ipynb)'
 
         md_doc.append(
-            f"| {identifier.split('@')[0]} | [{title_clean}]({ds_link}) | {py_colab_link} | {py_gh_link} | {r_gh_link} |\n")
+            f"| {identifier.split('@')[0]} | [{title_clean}]({ds_link}) | {py_gh_link} | {r_gh_link} |\n")
 
     md_doc = "".join(md_doc)
 
