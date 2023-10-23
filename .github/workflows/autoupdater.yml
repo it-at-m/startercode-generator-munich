@@ -28,8 +28,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
           source-directory: '_work'
-          destination-github-username: 'openZH'
-          destination-repository-name: 'starter-code-openZH'
+          destination-github-username: 'TxominBasterraChang'
+          destination-repository-name: 'Results'
           target-branch: main
           commit-message: "Updates"
           
