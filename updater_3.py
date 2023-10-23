@@ -182,6 +182,7 @@ def create_rmarkdown(data):
         # populate template with metadata
         identifier = data.loc[idx, "identifier"]
         name = data.loc[idx, "name"]
+        landingPage = data.loc[idx, "landingPage"]
         rmd = rmd.replace("{{ DATASET_TITLE }}", data.loc[idx, "title"])
         rmd = rmd.replace("{{ PROVIDER }}", PROVIDER)
         rmd = rmd.replace("{{ TODAY_DATE }}", TODAY_DATE)
@@ -192,7 +193,7 @@ def create_rmarkdown(data):
         rmd = rmd.replace("{{ DISTRIBUTION_COUNT }}", str(
             len(data.loc[idx, "distributions"])))
 
-        ds_link = f'[Direct data shop link for dataset]({BASELINK_DATASHOP}{name})'
+        ds_link = f'[Direct data shop link for dataset]({landingPage)'
         rmd = rmd.replace("{{ DATASHOP_LINK }}", ds_link)
 
         # create code blocks for all distributions
