@@ -23,7 +23,7 @@ SHOP_METADATA_LINK = "https://raw.githubusercontent.com/it-at-m/startercode-gene
 SHOP_ABBR = "ktzh"
 
 GITHUB_ACCOUNT = "it-at-m"
-REPO_NAME = "Results"
+REPO_NAME = "startercode-opendata-munich"
 REPO_BRANCH = "main"
 REPO_R_MARKDOWN_OUTPUT = "01_r-markdown/"
 REPO_PYTHON_OUTPUT = "02_python/"
