@@ -1,4 +1,4 @@
-# 🚀 Starter Code Generator OpenZH
+# 🚀 Starter Code Generator Munich
 
 ### Automatically generate Python and R starter code for Open Government Data Shops
 
