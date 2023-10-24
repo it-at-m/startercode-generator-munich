@@ -17,8 +17,8 @@ Feedback is always very welcome – simply open an issue.
 
 For all data licenses please refer to each data set's link or the metadata API endpoint provided [here](https://opendata.muenchen.de/pages/nutzungsbedingungen).
 
-Our thanks for the template and help goes to Patrick Arnecke from the Statistical Office of the Canton of Zurich. Here is the original:
-https://openzh.github.io/starter-code-openZH/
+🌻 Our thanks for the template and help goes to Patrick Arnecke from the Statistical Office of the Canton of Zurich. Here is the original:
+[https://openzh.github.io/starter-code-openZH/](https://openzh.github.io/starter-code-openZH/).
 
 <sub>Latest update: **{{ TODAY_DATE }}**<sub>
 
