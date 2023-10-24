@@ -29,7 +29,7 @@ jobs:
         with:
           source-directory: '_work'
           destination-github-username: 'it-at-m'
-          destination-repository-name: 'Results'
+          destination-repository-name: 'startercode-opendata-munich'
           target-branch: main
           commit-message: "Updates"
           
