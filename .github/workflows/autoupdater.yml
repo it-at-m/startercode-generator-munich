@@ -28,7 +28,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.PAT }}
         with:
           source-directory: '_work'
-          destination-github-username: 'TxominBasterraChang'
+          destination-github-username: 'it-at-m'
           destination-repository-name: 'Results'
           target-branch: main
           commit-message: "Updates"
