@@ -22,14 +22,12 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python updater_3.py
 
-      - name: Push generated files to target repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          source-directory: '_work'
-          destination-github-username: 'it-at-m'
-          destination-repository-name: 'startercode-opendata-munich'
-          target-branch: main
-          commit-message: "Updates"
-          
+          path: '_work'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
