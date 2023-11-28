@@ -12,7 +12,7 @@ The execution of the script is lightweight and takes only a couple of minutes de
 
 Your users get notebooks that are specifically tailored for every one of your datasets. They are already set with the most recent data set metadata and code snippets. Your user can start their analysis for your data sets right away with just a couple of clicks or even just one single click if they use Google Colab.
 
-The result looks like [this](https://github.com/openZH/starter-code-openZH).
+The result of this starter code looks: [it-at-m.github.io/startercode-opendata-munich/](https://it-at-m.github.io/startercode-opendata-munich/)
 
 
 ## How does it work?
