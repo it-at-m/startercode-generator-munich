@@ -3,7 +3,7 @@ run-name: autoupdater
 on:
   push:
   schedule:
-    - cron:  '35 3 * * *'
+    - cron: '35 3 * * 2'
 
 jobs:
   python_script:
